@@ -1,0 +1,34 @@
+﻿<Application x:Class="teke2test.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:teke2test"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="PinkBtn" TargetType="Button"> <!-- имя и указываем для чего создаём шаблон-->
+            <!--<Setter Property="Foreground" Value="White"></Setter> --><!--свойство кнопки(цвет текста)--><!--
+            <Setter Property="Background" Value="#D01183"></Setter> --><!--цвет кнопки--><!--
+            <Setter Property="FontSize" Value="48"></Setter>-->
+            
+            
+            <Setter Property="Template"> <!--СОЗДАЁМ ШАБЛОН !!!!-->
+                
+                <Setter.Value>  <!--Создаём значение для объекта-->
+                    <ControlTemplate TargetType= "Button">
+                        <!--внути именно этого тега описываем внутри как выглядит объект-->
+
+                        <Border CornerRadius="45" Background="#D01183"  > <!--закругление рамки-->
+                            <ContentPresenter TextBlock.Foreground="White"
+                                              TextBlock.FontSize="48"
+                                              VerticalAlignment="Center" 
+                                              HorizontalAlignment="Center">
+                                              
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+        </Style>
+    </Application.Resources>
+</Application>
